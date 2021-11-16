@@ -21,5 +21,4 @@ phases:
       - docker push 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:latest
       - echo Writing image definitions file...
       - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-artifacts:
-    files: imagedefinations.json
+
