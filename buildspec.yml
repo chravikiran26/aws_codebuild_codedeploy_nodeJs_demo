@@ -13,12 +13,12 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t ecr-cicd .
-      - docker tag ecr-cicd:latest 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:1     
+      - docker tag ecr-cicd:latest 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:2     
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:1
+      - docker push 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:2
       - echo Writing image definitions file...
       - printf '[{"name":"%s","imageUri":"%s"}]' $CONTAINER_NAME $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 
