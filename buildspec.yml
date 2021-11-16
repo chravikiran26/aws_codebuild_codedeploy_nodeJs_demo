@@ -12,7 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t ecr-cicd .
+      - docker build -t ecr-cicd1 .
       - docker tag ecr-cicd:latest 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:latest      
   post_build:
     commands:
