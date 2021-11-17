@@ -22,7 +22,7 @@ phases:
   post_build:
     commands:
       - echo Installing app dependencies...
-      - curl -o kubectl https://amazon-eks.s3.ap-notheast-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/kubectl   
+      - curl -o kubectl https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl   
       - chmod +x ./kubectl
       - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
       - echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
