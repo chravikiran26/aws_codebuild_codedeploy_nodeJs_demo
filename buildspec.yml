@@ -29,7 +29,8 @@ phases:
       - source ~/.bashrc
       - echo Entered the pre_build phase...
       - echo Logging in to Amazon EKS...
-      - aws eks --region ap-northeast-2 update-kubeconfig --name EKScluster1
+      - aws configure -u AKIA3XBJG7TNUHGJ2UNS -p 1Gc/DGVIytmHcGCfHl67RPyT6D50N4ojZhf4XfPn 
+      - aws eks --region ap-northeast-2 update-kubeconfig --name EKScluster1 
       - kubectl get nodes
       
 
