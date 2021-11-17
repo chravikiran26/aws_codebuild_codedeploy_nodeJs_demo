@@ -32,7 +32,6 @@ phases:
       - aws configure set aws_access_key_id AKIA3XBJG7TNUHGJ2UNS
       - aws configure set aws_secret_access_key 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 
       - aws eks --region ap-northeast-2 update-kubeconfig --name EKScluster1
-      - sudo su
       - kubectl
       
 
