@@ -29,6 +29,6 @@ phases:
       - source ~/.bashrc
       - echo Entered the pre_build phase...
       - echo Logging in to Amazon EKS...
-      - aws eks --region ap-northeast-2 --name EKScluster1
+      - aws eks --region ap-northeast-2 update-kubeconfig --name EKScluster1
       
 
