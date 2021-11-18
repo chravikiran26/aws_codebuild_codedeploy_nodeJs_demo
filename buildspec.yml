@@ -29,8 +29,8 @@ phases:
       - source ~/.bashrc
       - echo Entered the pre_build phase...
       - echo Logging in to Amazon EKS...
-      - aws configure set aws_access_key_id AKIA3XBJG7TNUHGJ2UNS
-      - aws configure set aws_secret_access_key 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 
+      - aws configure set aws_access_key_id AKIA3XBJG7TN2XROA77I
+      - aws configure set aws_secret_access_key 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
       - aws eks --region ap-south-1 update-kubeconfig --name sai
       - kubectl get nodes
       
