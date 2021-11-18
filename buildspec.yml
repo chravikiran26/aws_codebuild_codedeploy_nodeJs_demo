@@ -35,5 +35,6 @@ phases:
       - kubectl get nodes
       - kubectl apply -f eks_cicd/deployment.yaml
       - kubectl get deployments
+      - kubectl get all
       
 
