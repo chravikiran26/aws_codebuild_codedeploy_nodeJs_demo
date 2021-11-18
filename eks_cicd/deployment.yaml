@@ -18,7 +18,7 @@ spec:
         image: 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:2
         ports:
         - containerPort: 81
- ---
+---
    kind: Service
 metadata:
   name: nginx-deployment
