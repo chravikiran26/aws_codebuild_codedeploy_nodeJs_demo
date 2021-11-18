@@ -33,7 +33,7 @@ phases:
       - aws configure set aws_secret_access_key iaqTiPCquozo5ML+m/dkV9/1linW+LtMulJuCRsQ
       - aws eks --region ap-south-1 update-kubeconfig --name sai
       - kubectl get nodes
-      - kubectl apply -f nginx.yaml
+      - kubectl apply -f nginx.yml
       - kubectl get deployments
       
 
