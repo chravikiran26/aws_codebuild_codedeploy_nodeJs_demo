@@ -17,7 +17,7 @@ spec:
       - name: nginx
         image: 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:2
         ports:
-        - containerPort: 80
+        - containerPort: 81
  ---
    kind: Service
 metadata:
@@ -26,5 +26,5 @@ spec:
   selector:
     app: nginx
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 81
+    targetPort: 81
