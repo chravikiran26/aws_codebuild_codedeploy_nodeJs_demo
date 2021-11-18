@@ -6,7 +6,6 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  type: NodePort
   replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
@@ -15,16 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:2
+        image: nginx:1.14.2
         ports:
-        - containerPort: 81
----
-   kind: Service
-metadata:
-  name: nginx-deployment
-spec:
-  selector:
-    app: nginx
-  ports:
-  - port: 81
-    targetPort: 81
+        - containerPort: 80
