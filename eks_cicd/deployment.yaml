@@ -1,25 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app.kubernetes.io/name: cicd-demo
-    app.kubernetes.io/instance: cicd-demo-instance
-    app.kubernetes.io/version: '1.0.0'
-    app.kubernetes.io/managed-by: kubectl
-  name: cicd-demo-deployment
+  name: nginx-deployment
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: cicd-demo
+      app: nginx
+  replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: cicd-demo
+        app: nginx
     spec:
       containers:
-        - image: 805392809179.dkr.ecr.ap-south-1.amazonaws.com/ecr-cicd:2
-          imagePullPolicy: Always
-          name: cicd-demo
-          ports:
-            - containerPort: 3000
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
