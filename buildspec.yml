@@ -22,7 +22,7 @@ phases:
   post_build:
     commands:
       - echo Installing app dependencies...
-      - curl -o kubectl https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl   
+      - curl -o kubectl https://dl.k8s.io/release/v1.2o.0/bin/linux/amd64/kubectl   
       - chmod +x ./kubectl
       - mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
       - echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
@@ -31,7 +31,7 @@ phases:
       - echo Logging in to Amazon EKS...
       - aws configure set aws_access_key_id AKIA3XBJG7TNUHGJ2UNS
       - aws configure set aws_secret_access_key 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 
-      - aws eks --region ap-northeast-2 update-kubeconfig --name EKScluster1
+      - aws eks --region ap-south-1 update-kubeconfig --name sai
       - kubectl
       
 
