@@ -5,7 +5,7 @@ metadata:
   name: nginx
 spec:
   strategy:
-    type: NodePort
+    type: Recreate
   selector:
     matchLabels:
       app: nginx
